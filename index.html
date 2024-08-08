@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница авторизации</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <div class="form-header">
+                <button id="login-btn" class="tab active">Авторизация</button>
+                <button id="register-btn" class="tab">Регистрация</button>
+                <button id="reset-btn" class="tab">Восстановление доступа</button>
+            </div>
+            <form id="login-form" class="form active">
+                <h2>Авторизация</h2>
+                <label for="login-email">Email:</label>
+                <input type="email" id="login-email" required>
+                <label for="login-password">Пароль:</label>
+                <input type="password" id="login-password" required>
+                <div class="remember-me">
+                    <label for="remember-me">Запомнить меня</label>
+                    <input type="checkbox" id="remember-me">
+                </div>
+                <button type="submit">Войти</button>
+                <div id="login-message"></div>
+            </form>
+            <form id="register-form" class="form">
+                <h2>Регистрация</h2>
+                <label for="register-name">Имя:</label>
+                <input type="text" id="register-name" pattern="[А-Яа-яЁё ]+" title="Разрешены только русские символы и пробелы" required>
+                <label for="register-email">Email:</label>
+                <input type="email" id="register-email" required>
+                <label for="register-password">Пароль:</label>
+                <input type="password" id="register-password" required>
+                <label for="confirm-password">Подтверждение пароля:</label>
+                <input type="password" id="confirm-password" required>
+                <button type="submit">Зарегистрироваться</button>
+                <div id="register-message"></div>
+            </form>
+            <form id="reset-form" class="form">
+                <h2>Восстановление доступа</h2>
+                <label for="reset-email">Email:</label>
+                <input type="email" id="reset-email" required>
+                <button type="submit">Восстановить</button>
+                <div id="reset-message"></div>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
